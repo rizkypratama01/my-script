@@ -168,6 +168,10 @@ foreach my $domainName ( sort keys %$domains ) {
             my $time = timegm( $6, $5, $4, $3, $2 - 1, $1 );
             $logon = strftime( "%D %H:%M", localtime($time) );
         }
+        elsif ( $logon =~ /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})Z/ ) {
+            my $time = timegm( $6, $5, $4, $3, $2 - 1, $1 );
+            $logon = strftime( "%D %H:%M", localtime($time) );
+        }
         printf( $fmt, $name, $status, $created, $logon );
     }
     printf("\n");

@@ -139,7 +139,8 @@ my $domains = getData();
 # generate reports...
 
 # column widths and separators
-my @w = ( 36, 11, 15, 15 );
+# my @w = ( 36, 11, 15, 15 );
+my @w = ( 60, 11, 15, 15 );
 my @s = ( map( " " x $_, 3, 5, 2 ), "\n" );
 
 # col 0 left aligned, others right aligned, all strings truncate at max length
